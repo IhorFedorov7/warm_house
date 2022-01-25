@@ -1,0 +1,254 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+select {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 16px;
+    outline: none;
+}
+
+option {
+    color: black;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+}
+
+button {
+    border: none; 
+    outline: none;
+    font-weight: normal;
+    font-size: 24px;
+    color: white;
+    width: 289px;
+    height: 63px;
+}
+
+.content {
+    max-width: 1400px;
+    margin: auto;
+}
+.bg {
+    position: relative;
+    height: 100%;
+}
+
+.header_bg {
+    background: url('./img/bgHeader.png') no-repeat center;
+    background-size: cover;
+}
+
+.section_header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content_logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 144px;
+}
+
+.info_nav {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info_nav-text {
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.info_phone {
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.content_change-lang {
+    width: 48px;
+    color: white;
+}
+
+.section_title-block {
+    max-width: 726px;
+}
+
+.colortext {
+    color: #7DD824;
+}
+
+.title_info p {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.title_btn {
+    padding-top: 24px;
+    padding-bottom: 80px;
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_calculate {
+    background: #7DD824;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.btn_connection {
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    filter: drop-shadow(5px 7px 10px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.kinds-work_block {
+    margin-bottom: 32px;
+}
+
+.kinds-work_title {
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 32px;
+}
+
+.kinds-work_description {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.description-info_text {
+    width: 170px;
+    margin: auto;
+}
+
+.description-info_text h3 {
+    font-weight: bold;
+    font-size: 28px;
+    color: #434343;
+    text-align: center;
+}
+
+.show-bg {
+    background: #F5F5F5;
+}
+
+.section_show-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.show-content_title {
+    width: 700px;
+    font-weight: bold;
+    font-size: 32px; 
+}
+
+.show-content_slider-block {
+    max-width: 1220px;
+    height: 100%;
+}
+
+.slider-block_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.block_slider {
+    max-width: 45%;
+    overflow: hidden;
+    position: relative;
+}
+
+.block_slider-left, .block_slider-right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    font-size: 40px;
+    top: 50%;
+    cursor: pointer;
+    margin-top: -25px;
+    text-align: center;
+    line-height: 40px;
+    transition: all .5s ease;
+}
+
+.block_slider-left {
+    left: 30px;
+} 
+
+.block_slider-right {
+    right: 30px;
+}
+
+.block_slider-line {
+    display: flex;
+}
+
+.block_info {
+    padding: 1%;
+
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.block-info_title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.blosk-info_description {
+    width: 520px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.slider-block_content, .blosk-info_description, .block-info_title {
+    margin-bottom: 5%;
+}
+
+.blosk-info_btn {
+    margin-top: 10%;
+}

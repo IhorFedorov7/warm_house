@@ -1,0 +1,4 @@
+es2015/*
+prod/*
+node_modules
+package-lock.json
