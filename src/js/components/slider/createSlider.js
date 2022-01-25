@@ -54,7 +54,7 @@ const createSlider = ( oprion ) => {
         
     });
 
-    // fun();
+    fun();
 };
 
 export default createSlider;

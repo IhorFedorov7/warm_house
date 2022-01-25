@@ -252,6 +252,35 @@ button {
     margin-bottom: 5%;
 }
 
-.blosk-info_btn {
+.content-info_btn {
     margin-top: 10%;
+}
+
+.question_content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 32px;
+}
+
+.question_content-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.content-info_description {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    padding: 5px;
+}
+
+.questions-content_title {
+    font-weight: bold;
+    font-size: 40px;
+    color: #434343;
+    text-align: center;
+    padding-top: 48px;
 }
