@@ -284,3 +284,106 @@ button {
     text-align: center;
     padding-top: 48px;
 }
+
+.questions-content_FAQ {
+    padding-bottom: 32px;
+}
+
+.content_FAQ-questions {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+// ACCORDION
+.accordion__list{
+    background-color: white;
+}
+
+.accordion {
+	width: 500px;
+	margin-bottom: 10px;
+}
+
+.accordion__control {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
+	padding: 20px;
+}
+
+.accordion__control::-webkit-details-marker {
+	display: none;
+}
+
+.accordion__title {
+	margin: 0;
+}
+
+.accordion__icon {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+
+.accordion__icon::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 50%;
+	height: 1px;
+	background-color: #000;
+	transform: translate(-50%, -50%);
+}
+
+.accordion__icon::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1px;
+	height: 50%;
+	background-color: #000;
+	transform: translate(-50%, -50%);
+}
+
+.accordion__content {
+	padding: 20px;
+	border: 1px solid #888;
+	border-top: 1px solid transparent;
+}
+
+.accordion[open] .accordion__icon {
+	transform: rotate(45deg);
+}
+
+.accordion__control {
+	width: 100%;
+	background-color: white;
+}
+
+.accordion__title {
+	font-weight: normal;
+    font-size: 20px;
+    color: black;
+}
+
+.accordion__content {
+	display: none;
+}
+
+.open .accordion__content {
+	display: block;
+}
+
+.open .accordion__icon {
+	transform: rotate(45deg);
+}
+
+.accordion__control {
+	cursor: pointer;
+}
