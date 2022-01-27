@@ -298,6 +298,8 @@ button {
 // ACCORDION
 .accordion__list{
     background-color: white;
+    list-style-type: none;
+    padding: 0;
 }
 
 .accordion {
@@ -353,8 +355,6 @@ button {
 
 .accordion__content {
 	padding: 20px;
-	border: 1px solid #888;
-	border-top: 1px solid transparent;
 }
 
 .accordion[open] .accordion__icon {
@@ -386,4 +386,15 @@ button {
 
 .accordion__control {
 	cursor: pointer;
+}
+.accordion__block{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.accordion__img {
+    background: url('./img/ul.png') no-repeat center;
+    width: 50px;
+    height: 50px;
 }
