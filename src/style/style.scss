@@ -291,9 +291,10 @@ button {
 
 .content_FAQ-questions {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content:space-evenly;
 }
+
 
 // ACCORDION
 .accordion__list{
