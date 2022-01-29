@@ -39,7 +39,7 @@ button {
 }
 
 .content {
-    max-width: 1400px;
+    max-width: 1224px;
     margin: auto;
 }
 .bg {
@@ -119,13 +119,13 @@ button {
     justify-content: space-between;
 }
 
-.btn_calculate {
+.btn_calculate, .btn_order {
     background: #7DD824;
     box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
-.btn_connection {
+.btn_connection, .btn_write {
     background: transparent;
     border: 3px solid rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
@@ -282,11 +282,11 @@ button {
     font-size: 40px;
     color: #434343;
     text-align: center;
-    padding-top: 48px;
+    padding-top: 32px;
 }
 
 .questions-content_FAQ {
-    padding-bottom: 32px;
+    padding-bottom: 40px;
 }
 
 .content_FAQ-questions {
@@ -300,7 +300,7 @@ button {
 .accordion__list{
     background-color: white;
     list-style-type: none;
-    padding: 0;
+    padding: 24px;
 }
 
 .accordion {
@@ -308,12 +308,16 @@ button {
 	margin-bottom: 10px;
 }
 
+.accordion:not(:last-child) {
+    border-bottom: solid 1px #D7D7D7;
+}
+
 .accordion__control {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	list-style: none;
-	padding: 20px;
+	padding: 20px 0;
 }
 
 .accordion__control::-webkit-details-marker {
@@ -388,7 +392,7 @@ button {
 .accordion__control {
 	cursor: pointer;
 }
-.accordion__block{
+.accordion__block {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -398,4 +402,34 @@ button {
     background: url('./img/ul.png') no-repeat center;
     width: 50px;
     height: 50px;
+}
+
+.intro-contact_bg {
+    background: url('./img/bg.png') no-repeat center;
+    background-size: cover;
+}
+
+.intro-contact_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+.intro-help_btn {
+    margin-bottom: 40px;
+    min-width: 664px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_intro-title {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.content_intro-help {
+    font-weight: normal;
+    font-size: 24px;
 }
