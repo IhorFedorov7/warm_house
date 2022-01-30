@@ -3,6 +3,8 @@ import objLang from './lang/lang.js';
 import createSlider from './components/slider/createSlider.js';
 import infoSlide from './components/slider/obj.js';
 import slider from './components/slider/slider.js';
+import createAccordion from './components/accordion/createAccordion.js';
+import infoAccordion from './components/accordion/obj.js';
 import accordion from './components/accordion/accordion.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,7 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    accordion();
+    createAccordion({
+        arr: infoAccordion,
+        funAccordion: () => {
+            accordion();
+        }
+    });
+
     changeLang(objLang);
 });
 
