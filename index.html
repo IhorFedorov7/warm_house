@@ -61,7 +61,7 @@
     <section class="section_kinds-work">
         <div class="kinds-work_block content">
             <div class="kinds-work_title">
-                <h2>Что можно утеплить при помощи ППУ</h2>
+                <h2 class="lng-kinds-work_title">Что можно утеплить при помощи ППУ</h2>
             </div>
             <div class="kinds-work_description">
                 <div class="kinds-work_description-info">
@@ -69,7 +69,7 @@
                         <img src="./img/type/residential-buildings.png" alt="">
                     </div>
                     <div class="description-info_text">
-                        <h3 class="">Жилые дома</h3>
+                        <h3 class="lng-description-info_text">Жилые дома</h3>
                     </div>
                 </div>
                 <div class="kinds-work_description-info">
@@ -77,7 +77,7 @@
                         <img src="./img/type/commercial-buildings.png" alt="">
                     </div>
                     <div class="description-info_text">
-                        <h3 class="">Коммерческие здания</h3>
+                        <h3 class="lng-description-info_text">Коммерческие здания</h3>
                     </div>
                 </div>
                 <div class="kinds-work_description-info">
@@ -85,7 +85,7 @@
                         <img src="./img/type/tanks-cisterns.png" alt="">
                     </div>
                     <div class="description-info_text">
-                        <h3 class="">Резервуары и цестерны</h3>
+                        <h3 class="lng-description-info_text">Резервуары и цестерны</h3>
                     </div>
                 </div>
                 <div class="kinds-work_description-info">
@@ -93,7 +93,7 @@
                         <img src="./img/type/Warehouses-hangars.png" alt="">
                     </div>
                     <div class="description-info_text">
-                        <h3 class="">Склады и ангары</h3>
+                        <h3 class="lng-description-info_text">Склады и ангары</h3>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
     <section class="section_show show-bg bg">
         <div class="section_show-content content">
             <div class="show-content_title">
-                <h2>Утеплили пенополиуретаном более <span class="colortext">2000</span> объектов за <span class="colortext">8 лет</span> </h2>
+                <h2 class="lng-show-content_title">Утеплили пенополиуретаном более <span class="colortext">2000</span> объектов за <span class="colortext">8 лет</span> </h2>
             </div>
             <div class="show-content_slider-block">
             </div>
@@ -112,10 +112,10 @@
         <div class="description-question_content content">
             <div class="question_content-header">
                 <div class="content-header_info">
-                    <h2><span class="colortext">Снижение расходов на отопление дома на 40%</span></h2>
+                    <h2 class="lng-content-header_info"><span class="colortext">Снижение расходов на отопление дома на 40%</span></h2>
                 </div>
                 <div class="content-header_question">
-                    <h2>Почему стоит выбрать пенополиуретан (ППУ) ?</h2>
+                    <h2 class="lng-content-header_question">Почему стоит выбрать пенополиуретан (ППУ) ?</h2>
                 </div>
             </div>
             <div class="question_content-info">
@@ -123,7 +123,7 @@
                     <img src="./img/constructor.png" alt="">
                 </div>
                 <div class="content-info_description">
-                    <ul>
+                    <ul class="lng-content-info_description">
                         <li>Активно применяется в Канаде, США и Европе.</li>
                         <li>ППУ экологически безопасен.</li>
                         <li>Утепление пенополиуретаном не требует применения крепежей.</li>
@@ -141,7 +141,7 @@
     <section class="section_questions show-bg">
         <div class="section_questions-content content">
             <div class="questions-content_title">
-                <h2>Часто задаваемые вопросы</h2>
+                <h2 class="lng-questions-content_title">Часто задаваемые вопросы</h2>
             </div>
             <div class="questions-content_FAQ">
                 <div class="content_FAQ-questions">
@@ -153,14 +153,53 @@
     <section class="section_intro-contact intro-contact_bg bg">
         <div class="intro-contact_content content">
             <div class="content_intro-title">
-                <h2>Нет времени разбираться?</h2>
+                <h2 class="lng-content_intro-title">Нет времени разбираться?</h2>
             </div>
             <div class="content_intro-help">
-                <h3>Наши специалисты помогут</h3>
+                <h3 class="lng-content_intro-help">Наши специалисты помогут</h3>
             </div>
             <div class="intro-help_btn">
                 <button class="btn_order lng-btn_order">Заказать звонок</button>
                 <button class="btn_write lng-btn_write">Написать нам</button>
+            </div>
+        </div>
+    </section>
+    <section class="section_form">
+        <div class="form_content content">
+            <div class="content_form-header">
+                <div class="header_info">
+                    <h2 class="lng-content_intro-help">Контакты</h2>
+                </div>
+                <div class="header_form">
+                    <h2><span class="colortext lng-content_intro-help">Оставьте заявку</span></h2>
+                </div>
+            </div>
+            <div class="content_form-body">
+                <div class="body_contacts">
+                    <h3 class="telephone lng-content_intro-help">Телефон: </h3>
+                    <h3 class="mail lng-content_intro-help">Почта: </h3>
+                </div>
+                <div class="body_form">
+                    <form action="./src/mail/send.php" method="POST" class="form">
+                        <div class="form-name">
+                            <input type="text" class="name" name="name" data-rule="text" placeholder="Имя">
+                        </div>
+                        <div class="form-phone">
+                            <input type="number" class="phone" name="phone" data-rule="number" placeholder="Телефон">
+                        </div>
+                        <div class="form-email">
+                            <input type="email" class="email" name="email" data-rule="email" placeholder="Почта">
+                        </div>
+                        <!-- <div class="form-message">
+                            <textarea placeholder="Краткое описание" class="message" name="message" data-rule="message"></textarea>
+                        </div> -->
+                        <div class="form-btn_block">
+                            <p class="btn_block-info lng-content_intro-help">Отправляя запрос вы соглашаетесь с политикой конфиденциальности
+                            </p>
+                            <button class="btn_form lng-content_intro-help" disabled>Отправить</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

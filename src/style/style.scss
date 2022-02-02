@@ -10,6 +10,7 @@ select {
     padding: 0;
     font-size: 16px;
     outline: none;
+    cursor: pointer;
 }
 
 option {
@@ -36,6 +37,20 @@ button {
     color: white;
     width: 289px;
     height: 63px;
+    cursor: pointer;
+}
+
+input {
+    font-weight: normal;
+    font-size: 24px;
+    color: #949494;
+    border: 0;
+    padding: 10px;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 .content {
@@ -119,7 +134,7 @@ button {
     justify-content: space-between;
 }
 
-.btn_calculate, .btn_order {
+.btn_calculate, .btn_order, .btn_form {
     background: #7DD824;
     box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -309,7 +324,7 @@ button {
 }
 
 .accordion:not(:last-child) {
-    border-bottom: solid 1px #D7D7D7;
+    border-bottom: solid 1px #9D9D9D;
 }
 
 .accordion__control {
@@ -432,4 +447,98 @@ button {
 .content_intro-help {
     font-weight: normal;
     font-size: 24px;
+}
+
+.content_form-header, .content_form-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_info, .header_form {
+    font-weight: bold;
+    font-size: 40px;
+    color: #434343;
+}
+
+.content_form-body {
+    margin-top: 80px;
+    margin-bottom: 56px;
+}
+
+.body_contacts  {
+    font-weight: normal;
+    font-size: 24px;
+    color: #363636;
+}
+
+.form, .form-btn_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name, .phone, .email {
+    min-width: 560px;
+    border-bottom: 1px solid #9D9D9D;
+}
+
+@media (max-width: 1240px) {
+    .content {
+        max-width: 1000px;
+    }
+
+    .info_nav {
+        width: 40%;
+    }
+
+    .info_phone {
+        font-size: 20px;
+    }
+
+    .title_main h1{
+        font-size: 32px;
+    }
+
+    .title_info p {
+        font-size: 24px;
+    }
+
+    .description-info_text h3 {
+        font-size: 24px;
+    }
+    
+    .kinds-work_description {
+        align-items: baseline;
+    }
+
+    .show-content_slider-block {
+        max-width: 1000px;
+    }
+
+    .question_content-header, 
+    .kinds-work_title, 
+    .show-content_title, 
+    .content_intro-title, 
+    .questions-content_title, 
+    .header_form, 
+    .header_info {
+        font-size: 24px;
+    }
+
+    .content-info_img img {
+        max-width: 560px;
+    }
+
+    .content-info_description {
+        font-size: 18px;
+    }
+
+    .content_FAQ-questions {
+        justify-content: space-between;
+    }
+
+    .accordion {
+        max-width: 450px;
+    }
 }
