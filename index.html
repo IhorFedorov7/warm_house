@@ -22,9 +22,9 @@
                 </div>
                 <div class="info">
                     <nav class="info_nav">
-                        <a href="/">
+                        <!-- <a href="/">
                             <h4 class="work_nav lng-work info_nav-text">Работа</h4>
-                        </a>
+                        </a> -->
                         <a href="/">
                             <h4 class="contacts_nav lng-contacts info_nav-text">Контакты</h4>
                         </a>
@@ -114,17 +114,17 @@
     </section>
     <section class="select_description-question">
         <div class="description-question_content content">
-            <div class="question_content-header">
+            <div class="question_content-one">
                 <div class="content-header_info">
                     <h2 class="lng-content-header_info"><span class="colortext">Снижение расходов на отопление дома на 40%</span></h2>
                 </div>
-                <div class="content-header_question">
-                    <h2 class="lng-content-header_question">Почему стоит выбрать пенополиуретан (ППУ) ?</h2>
-                </div>
-            </div>
-            <div class="question_content-info">
                 <div class="content-info_img">
                     <img src="./img/constructor.png" alt="">
+                </div>
+            </div>
+            <div class="question_content-two">
+                <div class="content-header_question">
+                    <h2 class="lng-content-header_question">Почему стоит выбрать пенополиуретан (ППУ) ?</h2>
                 </div>
                 <div class="content-info_description">
                     <ul class="lng-content-info_description">
@@ -170,39 +170,41 @@
     </section>
     <section class="section_form">
         <div class="form_content content">
-            <div class="content_form-header">
-                <div class="header_info">
-                    <h2 class="lng-content_intro-help">Контакты</h2>
+            <div class="content_form-block">
+                <div class="content_form-block-one">
+                    <div class="header_info">
+                        <h2 class="lng-content_intro-help">Контакты</h2>
+                    </div>
+                    <div class="body_contacts">
+                        <h3 class="telephone lng-content_intro-help">Телефон: </h3>
+                        <h3 class="mail lng-content_intro-help">Почта: </h3>
+                    </div>
                 </div>
-                <div class="header_form">
-                    <h2><span class="colortext lng-content_intro-help">Оставьте заявку</span></h2>
-                </div>
-            </div>
-            <div class="content_form-body">
-                <div class="body_contacts">
-                    <h3 class="telephone lng-content_intro-help">Телефон: </h3>
-                    <h3 class="mail lng-content_intro-help">Почта: </h3>
-                </div>
-                <div class="body_form">
-                    <form action="./src/mail/send.php" method="POST" class="form">
-                        <div class="form-name">
-                            <input type="text" class="name" name="name" data-rule="text" placeholder="Имя">
-                        </div>
-                        <div class="form-phone">
-                            <input type="number" class="phone" name="phone" data-rule="number" placeholder="Телефон">
-                        </div>
-                        <div class="form-email">
-                            <input type="email" class="email" name="email" data-rule="email" placeholder="Почта">
-                        </div>
-                        <!-- <div class="form-message">
-                            <textarea placeholder="Краткое описание" class="message" name="message" data-rule="message"></textarea>
-                        </div> -->
-                        <div class="form-btn_block">
-                            <p class="btn_block-info lng-content_intro-help">Отправляя запрос вы соглашаетесь с политикой конфиденциальности
-                            </p>
-                            <button class="btn_form lng-content_intro-help" disabled>Отправить</button>
-                        </div>
-                    </form>
+                <div class="content_form-block-two">
+                    <div class="header_form">
+                        <h2><span class="colortext lng-content_intro-help">Оставьте заявку</span></h2>
+                    </div>
+                    <div class="body_form">
+                        <form action="./src/mail/send.php" method="POST" class="form">
+                            <div class="form-name">
+                                <input type="text" class="name" name="name" data-rule="text" placeholder="Имя">
+                            </div>
+                            <div class="form-phone">
+                                <input type="number" class="phone" name="phone" data-rule="number" placeholder="Телефон">
+                            </div>
+                            <div class="form-email">
+                                <input type="email" class="email" name="email" data-rule="email" placeholder="Почта">
+                            </div>
+                            <!-- <div class="form-message">
+                                <textarea placeholder="Краткое описание" class="message" name="message" data-rule="message"></textarea>
+                            </div> -->
+                            <div class="form-btn_block">
+                                <p class="btn_block-info lng-content_intro-help">Отправляя запрос вы соглашаетесь с политикой конфиденциальности
+                                </p>
+                                <button class="btn_form lng-content_intro-help" disabled>Отправить</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

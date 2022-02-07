@@ -85,7 +85,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 144px;
+    padding-left: 10%;
 }
 
 .info_nav {
@@ -280,23 +280,28 @@ input {
     margin-top: 10%;
 }
 
-.question_content-header {
+.description-question_content, .content_form-block {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    font-size: 32px;
 }
 
-.question_content-info {
+.content-header_info, .content-header_question {
+    font-size: 28px;
+}
+
+.question_content-one, .question_content-two, .content_form-block-one, .content_form-block-two {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    flex-direction: column;
+
     margin-bottom: 40px;
 }
 
 .content-info_description {
     font-weight: normal;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 40px;
     padding: 5px;
 }
@@ -498,7 +503,7 @@ input {
     }
 
     .info_nav {
-        width: 40%;
+        width: 30%;
     }
 
     .info_phone {
@@ -530,7 +535,7 @@ input {
         max-width: 1000px;
     }
 
-    .question_content-header, 
+    .content-info_description,
     .kinds-work_title, 
     .show-content_title, 
     .content_intro-title, 
@@ -557,14 +562,14 @@ input {
     }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1084px) {
     .kinds-work_description {
         flex-direction: column;
         align-items: center;
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .section_header-content {
         justify-content: space-around;
     }
@@ -595,5 +600,28 @@ input {
 
     .blosk-info_btn {
         margin-bottom: 24px;
+    }
+
+    .description-question_content, .content_form-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .question_content-one, .question_content-two, .content_form-block-one, .content_form-block-two {
+        align-items: center;
+    }
+
+    .content-header_info, .content-header_question {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 750px) {
+    .info {
+        justify-content: center;
+    }
+
+    .info_phone {
+        display: none;
     }
 }
