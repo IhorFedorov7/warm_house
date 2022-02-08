@@ -625,3 +625,43 @@ input {
         display: none;
     }
 }
+
+@media (max-width: 700px) {
+    .show-content_slider-block {
+        max-width: 500px;
+    }
+
+    .block_slider {
+        max-width: 70%;
+    }
+
+    .show-content_title, .content-header_info, .content-header_question {
+        width: 65%;
+        font-size: 20px;
+    }
+
+    .intro-help_btn, .title_btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn_order, .btn_calculate {
+        margin-bottom: 16px;
+    }
+
+    .blosk-info_description {
+        width: 450px
+    }
+
+    .block_slider {
+        max-width: 80%;
+    }
+
+    .section_title-block {
+        max-width: 500px;
+    }
+
+    .form {
+        max-width: 500px;
+    }
+}

@@ -12,7 +12,7 @@ const slider = function( option ) {
             if ( width == 0 || width == undefined ) {
 
                 width = el.querySelector('.block_slider').offsetWidth;
-        
+                
                 setTimeout(init, 50);
             } else {  
                   
