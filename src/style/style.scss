@@ -627,6 +627,10 @@ input {
 }
 
 @media (max-width: 700px) {
+    .content {
+        max-width: 500px;
+    }
+
     .show-content_slider-block {
         max-width: 500px;
     }
@@ -645,6 +649,10 @@ input {
         align-items: center;
     }
 
+    .intro-help_btn {
+        min-width: 500px;
+    }
+
     .btn_order, .btn_calculate {
         margin-bottom: 16px;
     }
@@ -661,7 +669,7 @@ input {
         max-width: 500px;
     }
 
-    .form {
-        max-width: 500px;
+    .email, .name, .phone {
+        min-width: 400px;
     }
 }
