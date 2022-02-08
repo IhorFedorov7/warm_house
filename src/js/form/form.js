@@ -1,59 +1,39 @@
-const formFactory = {
-    createNewForm: function (){
-        const newForm = {
-            inputs: null,
-            btn: null,
-            valid: null,
+const form = function( option ) {
+    let formInputs = document.querySelectorAll('[data-rule]'),
+        btn = document.querySelector('.btn_form'),
+        valid;
+    const RULES =  option.rules;
 
-            start: function(e) {
-                const form = this;
-                this.inputs = document.querySelectorAll('[data-rule]');
-                this.btn = document.querySelector('.form-button');
+    const btnActiv = () => {
+        valid = document.querySelectorAll('.valid');
 
-                for(let input of this.inputs) {
-                    input.addEventListener('input', function(у){
-                        let rule = this.dataset.rule;
-                        let value = this.value;
-                        let check;
-
-                        switch(rule) {
-                            case 'text': 
-                                check = /^(([A-Za-z]|[А-Яа-я]){2,10})$/.test(value);
-                            break;
-                            case 'number': 
-                                check = /^(([0-9]){7,12})$/.test(value);
-                            break;
-                            case 'email': 
-                                check = /^([a-zA-Z0-9\_.-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/.test(value);
-                            break;
-                            case 'message': 
-                                check = /^(([А-Яа-я0-9\.\,\s]|[a-zA-Z\.\,\s]){10,60})$/.test(value);
-                            break;
-                        }
-
-                        if (check) {
-                            this.classList.add('valid');
-                            form.btnActive(e);
-                        } else {
-                            this.classList.remove('valid');
-                            form.btnActive(e);
-                        }  
-                    });
-                }
-            },
-
-            btnActive: function(e) {
-                this.valid = document.querySelectorAll('.valid');
-
-                if(this.valid.length < 3 ) {
-                    this.btn.disabled = true;
-                } else {
-                    this.btn.disabled = false;
-                }  
-            }
-        }
-        return newForm;
+        if(valid.length < 2 ) {
+            btn.disabled = true;
+        } else {
+            btn.disabled = false;
+        }  
     }
-};
+    
+    for(let input of formInputs) {
+        input.addEventListener('input', (e) => {
+            let rule = input.dataset.rule;
+            let value = input.value;
+            let check;
+            
+            (() => { 
+                
+                check =  RULES[rule].test(value); 
+            })();
 
-export default formFactory;
+            if (check) {
+                input.classList.add('valid');
+                btnActiv(e);
+            } else {
+                input.classList.remove('valid');
+                btnActiv(e);
+            }  
+        });
+    }
+}
+
+export default form;

@@ -185,9 +185,10 @@
                         <h2><span class="colortext lng-content_intro-help">Оставьте заявку</span></h2>
                     </div>
                     <div class="body_form">
-                        <form action="./src/mail/send.php" method="POST" class="form">
+                        <!-- action="./src/mail/send.php" method="POST" -->
+                        <form class="form js-form">
                             <div class="form-name">
-                                <input type="text" class="name" name="name" data-rule="text" placeholder="Имя">
+                                <input type="text" class="name" name="name" data-rule="nume" placeholder="Имя">
                             </div>
                             <div class="form-phone">
                                 <input type="number" class="phone" name="phone" data-rule="number" placeholder="Телефон">
@@ -201,7 +202,7 @@
                             <div class="form-btn_block">
                                 <p class="btn_block-info lng-content_intro-help">Отправляя запрос вы соглашаетесь с политикой конфиденциальности
                                 </p>
-                                <button class="btn_form lng-content_intro-help" disabled>Отправить</button>
+                                <button class="btn_form lng-content_intro-help" type="submit" disabled>Отправить</button>
                             </div>
                         </form>
                     </div>

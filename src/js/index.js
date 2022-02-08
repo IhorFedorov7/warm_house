@@ -6,6 +6,7 @@ import slider from './components/slider/slider.js';
 import createAccordion from './components/accordion/createAccordion.js';
 import infoAccordion from './components/accordion/obj.js';
 import accordion from './components/accordion/accordion.js';
+import form from './form/form.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     createSlider({
@@ -23,6 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
             accordion();
         }
     });
+
+    form({
+        rules: {
+            nume: /^(([A-Za-z]|[А-Яа-я]){2,10})$/,
+            email: /^([a-zA-Z0-9\_.-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/, 
+            number: /^(([0-9]){7,12})$/
+        }
+    })
 
     changeLang(objLang);
 });
