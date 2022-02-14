@@ -4,11 +4,9 @@ const form = function( option ) {
         valid;
 
     const RULES =  option.rules;
+    const param = option.forms;
+    const service = option.servis;
     const forms = document.getElementById('form');
-    const bot = {
-        TOKIN: '5288793147:AAHBWe1abCXXvGZ1V1UgqvYH1m56OGd34VI',
-        chatID: '-631831970'
-    }
 
     forms.addEventListener('submit', formSend);
 
@@ -24,24 +22,46 @@ const form = function( option ) {
         }  
     };
 
-    // const fetchPOST = ( options ) => {
-    //     const formData = options.fromText;
-    //     const bot = options.bot;
+    const fetchPOST = ( options ) => {
+        const formData = options.fromText;
+        const param = Object.entries(options.param);
 
-    //     fetch(`https://api.telegram.org/bot${bot.TOKIN}/sendMessage?chat_id=${bot.chatID}&text=${formData}`, {
-    //         method: 'POST'
-    //     })
-    //     .then((result) => {
+        param.forEach( key => {
 
-    //         console.log(result);
-    //     }).catch((err) => {
+            let services = Object.entries(key[1]);
+
+            if ( service.includes(services[0][0]) ) {
+
+                let { TOKIN, chatID, URLs } = services[0][1];
+                
+                fetch(`${URLs.url}${TOKIN}${URLs.chat === undefined ? '' : URLs.chat}${chatID === undefined ? '' : chatID}${URLs.type}${chatID === undefined && URLs.chat === undefined ? '' : formData}`, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin' : '*', 
+                        'Access-Control-Allow-Credentials' : true 
+                    }
+                })
+                .then((result) => {
+        
+                    if ( !result.ok ) {
+        
+                        console.log('Ошибка!');
+                    }
+        
+                }).catch((err) => {
+        
+                    console.log(err);
+                });
+            }
             
-    //     });
-
-    // };
+        });
+    };
 
     const serializeForm = ( formNode ) => {
         const { elements } = formNode;
+        let text = `Resutl is: ${document.location.host}`; 
 
         const data = Array.from(elements)
             .filter((item) => !!item.name && !!item.value)
@@ -50,8 +70,16 @@ const form = function( option ) {
                 const { name, value } = element;
                 return { name, value };
             }); 
+        
+        data.forEach(i => {
 
-        console.log(data);
+            text += `%0A - ${i.name} : ${i.value}`
+        })
+
+        fetchPOST({
+            param,
+            fromText: text
+        });
     };
     
     for ( let input of formInputs ) {
@@ -79,15 +107,11 @@ const form = function( option ) {
     };
 
     async function formSend (e) {
+
         e.preventDefault();
         serializeForm(forms);
-        // let formData = new FormData(forms);
-        // console.log(formData.values());
 
-        // await fetchPOST({
-        //     bot: bot,
-        //     fromText: formData
-        // });
+        forms.reset();
     };
 }
 
