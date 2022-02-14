@@ -34,14 +34,16 @@ const form = function( option ) {
 
                 let { TOKIN, chatID, URLs } = services[0][1];
                 
+                console.log(`${URLs.url}${TOKIN}${URLs.chat === undefined ? '' : URLs.chat}${chatID === undefined ? '' : chatID}${URLs.type}${chatID === undefined && URLs.chat === undefined ? '' : formData}`);
+                //`https://script.google.com/macros/s/AKfycbwx6CceT2OQxKOGrlPFIuiwnWksY1GZ5NAc2vM0blW7eJYQTFZ8zfp5u8neq4eBAT7PAw/exec`
                 fetch(`${URLs.url}${TOKIN}${URLs.chat === undefined ? '' : URLs.chat}${chatID === undefined ? '' : chatID}${URLs.type}${chatID === undefined && URLs.chat === undefined ? '' : formData}`, {
                     method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin' : '*', 
-                        'Access-Control-Allow-Credentials' : true 
-                    }
+                    body: formData
+                    // headers: {
+                    //     'Content-Type': 'application/json',
+                    //     'Access-Control-Allow-Origin' : '*', 
+                    //     'Access-Control-Allow-Credentials' : true 
+                    // }
                 })
                 .then((result) => {
         
@@ -49,10 +51,12 @@ const form = function( option ) {
         
                         console.log('Ошибка!');
                     }
+
+                    console.log('Success!', result);
         
                 }).catch((err) => {
         
-                    console.log(err);
+                    console.error('Error!', err.message);
                 });
             }
             
