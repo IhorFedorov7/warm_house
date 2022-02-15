@@ -44,15 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
-            {
-                'google': {
-                    TOKIN: 'AKfycbwx6CceT2OQxKOGrlPFIuiwnWksY1GZ5NAc2vM0blW7eJYQTFZ8zfp5u8neq4eBAT7PAw',
-                    URLs: {
-                        url: 'https://script.google.com/macros/s/',
-                        type: '/exec'
-                    }
-                }
-            }
+            // {
+            //     'google': {
+            //         TOKIN: 'AKfycbx9v0_dMco_WvTpq3hBR8rhr_xaHOssI893IxdctciSPWEAIzRncsE0r25_a1IZqRsHGA',
+            //         URLs: {
+            //             url: 'https://script.google.com/macros/s/',
+            //             type: '/exec'
+            //         }
+            //     }
+            // }
         ]
     })
     

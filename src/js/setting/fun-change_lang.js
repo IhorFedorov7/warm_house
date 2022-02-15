@@ -28,16 +28,21 @@ const changeLang = ( objLang ) => {
         document.querySelector('title').textContent = objLang['title'][hash];
 
         for ( let key in objLang ) {
-            let el = document.querySelector(`.lng-${key}`);
-
+            console.log(objLang[key]);
+            
+            let el = document.querySelectorAll(`.lng-${key}`);
+            
             if ( el ) {
                 
-                el.textContent = objLang[key][hash];
+                el.forEach( i => {
+
+                    i.textContent = objLang[key][hash];
+                });
             }
         };
     };
 
-    changeLanguage()
+    changeLanguage();
 };
 
 export default changeLang;

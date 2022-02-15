@@ -3,10 +3,10 @@ const form = function( option ) {
         btn = document.querySelector('.btn_form'),
         valid;
 
-    const RULES =  option.rules;
-    const param = option.forms;
-    const service = option.servis;
-    const forms = document.getElementById('form');
+    const RULES =  option.rules,
+        param = option.forms,
+        service = option.servis,
+        forms = document.getElementById('form');
 
     forms.addEventListener('submit', formSend);
 
@@ -23,7 +23,8 @@ const form = function( option ) {
     };
 
     const fetchPOST = ( options ) => {
-        const formData = options.fromText;
+        const formDataMesseng = options.text;
+        const formDataArr = options.arr;
         const param = Object.entries(options.param);
 
         param.forEach( key => {
@@ -34,38 +35,35 @@ const form = function( option ) {
 
                 let { TOKIN, chatID, URLs } = services[0][1];
                 
-                console.log(`${URLs.url}${TOKIN}${URLs.chat === undefined ? '' : URLs.chat}${chatID === undefined ? '' : chatID}${URLs.type}${chatID === undefined && URLs.chat === undefined ? '' : formData}`);
-                //`https://script.google.com/macros/s/AKfycbwx6CceT2OQxKOGrlPFIuiwnWksY1GZ5NAc2vM0blW7eJYQTFZ8zfp5u8neq4eBAT7PAw/exec`
-                fetch(`${URLs.url}${TOKIN}${URLs.chat === undefined ? '' : URLs.chat}${chatID === undefined ? '' : chatID}${URLs.type}${chatID === undefined && URLs.chat === undefined ? '' : formData}`, {
+                fetch(`${URLs.url}${TOKIN}${URLs.chat === undefined ? '' : URLs.chat}${chatID === undefined ? '' : chatID}${URLs.type}${chatID === undefined && URLs.chat === undefined ? '' : formDataMesseng}`, {
                     method: 'POST',
-                    body: formData
-                    // headers: {
-                    //     'Content-Type': 'application/json',
-                    //     'Access-Control-Allow-Origin' : '*', 
-                    //     'Access-Control-Allow-Credentials' : true 
-                    // }
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin' : '*', 
+                        'Access-Control-Allow-Credentials' : true 
+                    },
+                    body: formDataArr
                 })
-                .then((result) => {
+                .then((request) => {
         
-                    if ( !result.ok ) {
+                    if ( !request.ok ) {
         
-                        console.log('Ошибка!');
+                        return;
                     }
 
-                    console.log('Success!', result);
-        
+                    return request.json();
                 }).catch((err) => {
         
                     console.error('Error!', err.message);
                 });
-            }
-            
+            } 
         });
     };
 
     const serializeForm = ( formNode ) => {
         const { elements } = formNode;
-        let text = `Resutl is: ${document.location.host}`; 
+        let textForm = `Resutl is: ${document.location.host}`; 
+        let arrForm = {};
 
         const data = Array.from(elements)
             .filter((item) => !!item.name && !!item.value)
@@ -77,12 +75,14 @@ const form = function( option ) {
         
         data.forEach(i => {
 
-            text += `%0A - ${i.name} : ${i.value}`
-        })
-
+            textForm += `%0A - ${i.name} : ${i.value}`;
+            return arrForm[i.name] = i.value;
+        });
+        
         fetchPOST({
             param,
-            fromText: text
+            text: textForm,
+            arr: arrForm
         });
     };
     
