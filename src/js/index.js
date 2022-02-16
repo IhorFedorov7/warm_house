@@ -7,6 +7,8 @@ import createAccordion from './components/accordion/createAccordion.js';
 import infoAccordion from './components/accordion/obj.js';
 import accordion from './components/accordion/accordion.js';
 import form from './form/form.js';
+import infoDescription from './components/description/obj.js';
+import createDescription from './components/description/createDescription.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     createSlider({
@@ -16,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 act: [1,2,3]
             })
         }
+    });
+
+    createDescription({
+        arr: infoDescription
     });
 
     createAccordion({

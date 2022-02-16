@@ -1,8 +1,8 @@
 const slider = function( option ) {
     const act = option.act;
 
-    act.forEach( acts => {
-        const el = document.querySelector(`.slider-block_content[data-order="${acts}"]`);
+    act.forEach( (acts, index) => {
+        const el = document.querySelector(`.slider-block_content[data-order="${index}"]`);
         const images = el.querySelectorAll('.block_slider .block_slider-line img');
         const sliderLine = el.querySelector('.block_slider-line');
         let count = 0;

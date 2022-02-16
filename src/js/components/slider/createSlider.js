@@ -1,8 +1,9 @@
 const createSlider = ( oprion ) => {
     const arr = oprion.arr;
     const fun = oprion.funSlider;
+    let hash = window.location.hash;
 
-    arr.forEach(key => {
+    arr.forEach( (key, index) => {
         let imgEl = '';
         let infoEl = '';
 
@@ -18,7 +19,7 @@ const createSlider = ( oprion ) => {
         })();
 
         (() => {
-            const info = key.info;
+            const info = hash === '#ua' ? key.info_ua : key.info_ru;
             
             info.forEach(i => {
                 return  infoEl += `
@@ -38,7 +39,7 @@ const createSlider = ( oprion ) => {
                 </div>
                 <div class="block_info">
                     <div class="block-info_title">
-                        <h3 class="lng-slide_info-title">${key.type}</h3>
+                        <h3 class="lng-slide_info-title-${index}">${key.type}</h3>
                     </div>
                     <div class="blosk-info_description">
                         <ul>
@@ -51,7 +52,6 @@ const createSlider = ( oprion ) => {
                 </div>
             </div>
         `;
-        
     });
 
     fun();

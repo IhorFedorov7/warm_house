@@ -28,7 +28,6 @@ const changeLang = ( objLang ) => {
         document.querySelector('title').textContent = objLang['title'][hash];
 
         for ( let key in objLang ) {
-            console.log(objLang[key]);
             
             let el = document.querySelectorAll(`.lng-${key}`);
             

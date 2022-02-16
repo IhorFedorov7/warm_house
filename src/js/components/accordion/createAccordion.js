@@ -2,11 +2,13 @@ const createAccordion = ( oprion ) => {
     const arr = oprion.arr;
     const fun = oprion.funAccordion;
 
+    let hash = window.location.hash;
+
     arr.forEach(key => {
         let accordionEl = '';
 
         (() => {
-            const FAQ = key.FAQ;
+            const FAQ = hash === '#ua' ? key.FAQ_ua : key.FAQ_ru;
 
             FAQ.forEach(i => {
     
