@@ -3,6 +3,7 @@ const changeLang = ( option ) => {
     const allLang = option.lng;
     const text = option.obj.text;
     const html = option.obj.html;
+    const src = option.obj.src;
 
     select.addEventListener('change', changeURLLanguage);
 
@@ -51,6 +52,19 @@ const changeLang = ( option ) => {
                 el.forEach( i => {
 
                     i.innerHTML = html[key][hash];
+                });
+            }
+        };
+
+        for ( let key in src ) {
+            
+            let el = document.querySelectorAll(`.lng-${key}`);
+            
+            if ( el ) {
+                
+                el.forEach( i => {
+                    
+                    i.setAttribute('src', src[key][hash]);
                 });
             }
         };

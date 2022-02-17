@@ -28,10 +28,12 @@ const form = function( option ) {
         const param = Object.entries(options.param);
 
         param.forEach( key => {
-
             let services = Object.entries(key[1]);
 
-            if ( service.includes(services[0][0]) ) {
+            if (
+                services.length !== 0 && 
+                service.includes(services[0][0]) 
+            ) {
 
                 let { TOKIN, chatID, URLs } = services[0][1];
                 
