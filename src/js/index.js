@@ -62,7 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     })
     
-    changeLang(objLang);
+    changeLang({
+        obj : objLang,
+        lng : ['ru', 'ua']
+    });
 });
 
 

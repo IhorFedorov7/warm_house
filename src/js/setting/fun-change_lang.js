@@ -1,6 +1,8 @@
-const changeLang = ( objLang ) => {
+const changeLang = ( option ) => {
     const select = document.querySelector('select');
-    const allLang = ['ru', 'ua'];
+    const allLang = option.lng;
+    const text = option.obj.text;
+    const html = option.obj.html;
 
     select.addEventListener('change', changeURLLanguage);
 
@@ -25,9 +27,9 @@ const changeLang = ( objLang ) => {
 
         select.value = hash;
 
-        document.querySelector('title').textContent = objLang['title'][hash];
+        document.querySelector('title').textContent = text['title'][hash];
 
-        for ( let key in objLang ) {
+        for ( let key in text ) {
             
             let el = document.querySelectorAll(`.lng-${key}`);
             
@@ -35,7 +37,20 @@ const changeLang = ( objLang ) => {
                 
                 el.forEach( i => {
 
-                    i.textContent = objLang[key][hash];
+                    i.textContent = text[key][hash];
+                });
+            }
+        };
+
+        for ( let key in html ) {
+            
+            let el = document.querySelectorAll(`.lng-${key}`);
+            
+            if ( el ) {
+                
+                el.forEach( i => {
+
+                    i.innerHTML = html[key][hash];
                 });
             }
         };
