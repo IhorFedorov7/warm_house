@@ -31,11 +31,12 @@ const createSlider = ( oprion ) => {
         document.querySelector('.show-content_slider-block').innerHTML += `
             <div class="slider-block_content" data-order="${key.order}">
                 <div class="block_slider">
-                    <div class="block_slider-left"><</div>
+                    <div class="block_slider-left"><h3><</h3></div>
                     <div class="block_slider-line">
                         ${imgEl}
                     </div>
-                    <div class="block_slider-right">></div>
+                    <div class="block_slider-right">
+                    <h3>></h3></div>
                 </div>
                 <div class="block_info">
                     <div class="block-info_title">

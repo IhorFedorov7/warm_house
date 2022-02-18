@@ -24,6 +24,10 @@ a {
     
 }
 
+p {
+    line-height: 1.5;
+}
+
 h1 {
     color: white;
     font-size: 48px;
@@ -227,6 +231,7 @@ input {
 
 .block_slider-left, .block_slider-right {
     position: absolute;
+    display: flex;
     width: 50px;
     height: 50px;
     background: white;
@@ -236,8 +241,15 @@ input {
     cursor: pointer;
     margin-top: -25px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     line-height: 40px;
     transition: all .5s ease;
+}
+
+.block_slider-left h3, .block_slider-right h3 {
+    margin: 0;
+    height: 100%;
 }
 
 .block_slider-left {
@@ -276,6 +288,10 @@ input {
     font-size: 20px;
 }
 
+.blosk-info_description li {
+    line-height: 1.5;
+}
+
 .slider-block_content, .blosk-info_description, .block-info_title {
     margin-bottom: 5%;
 }
@@ -301,6 +317,13 @@ input {
     flex-direction: column;
 
     margin-bottom: 40px;
+}
+
+.content-info_img {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-info_description {
@@ -580,6 +603,10 @@ input {
         flex-direction: column;
         align-items: center;
     }
+
+    .description_block-one {
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -729,7 +756,7 @@ input {
     }
 
     [class*=description_block-] img {
-        width: 80%;
+        width: 100%;
     }
 
     .description-info_text {
@@ -779,7 +806,7 @@ input {
 
 @media (max-width: 440px) {
     button {
-        width: 200px;
+        width: 250px;
     }
 
     .content {

@@ -259,12 +259,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     'ua' : 'Контакти',
                 },
                 'content-form_intro-phone' : {
-                    'ru': 'Контакты',
-                    'ua' : 'Телефон',
+                    'ru': 'Телефон:',
+                    'ua' : 'Телефон:',
                 },
                 'content-form_intro-mail' : {
-                    'ru': 'Контакты',
-                    'ua' : 'Пошта',
+                    'ru': 'Почта:',
+                    'ua' : 'Пошта:',
                 },
                 'content-form_intro-form' : {
                     'ru': 'Оставьте заявку',
