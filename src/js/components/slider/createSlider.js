@@ -12,7 +12,7 @@ const createSlider = ( oprion ) => {
             
             img.forEach(images => {
                 return  imgEl += `
-                    <img src="${images}" alt="">
+                    <img src="${images}" alt="" width="100%" height="100%">
                 `;
             }); 
             

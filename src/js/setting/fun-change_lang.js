@@ -3,7 +3,7 @@ const changeLang = ( option ) => {
     const allLang = option.lng;
     const text = option.obj.text;
     const html = option.obj.html;
-    const src = option.obj.src;
+    const attr = option.obj.attr;
 
     select.addEventListener('change', changeURLLanguage);
 
@@ -37,7 +37,7 @@ const changeLang = ( option ) => {
             if ( el ) {
                 
                 el.forEach( i => {
-
+                    
                     i.textContent = text[key][hash];
                 });
             }
@@ -46,27 +46,37 @@ const changeLang = ( option ) => {
         for ( let key in html ) {
             
             let el = document.querySelectorAll(`.lng-${key}`);
-            
+
             if ( el ) {
                 
                 el.forEach( i => {
-
+                    
                     i.innerHTML = html[key][hash];
                 });
             }
         };
 
-        for ( let key in src ) {
-            
-            let el = document.querySelectorAll(`.lng-${key}`);
-            
-            if ( el ) {
-                
-                el.forEach( i => {
-                    
-                    i.setAttribute('src', src[key][hash]);
-                });
-            }
+        for ( let key in attr ) {
+
+            const objAttr = attr[key];
+
+            for ( let j in objAttr ) { 
+
+                let el = document.querySelectorAll(`.lng-${j}`);
+        
+                if ( el ) {
+                                
+                    el.forEach( i => {
+                        if (key === 'src') {
+                            i.setAttribute('src', objAttr[j][hash]);
+                        }                
+                        
+                        if (key === 'alt') {
+                            i.setAttribute('alt', objAttr[j][hash]);
+                        }  
+                    });
+                } 
+            };
         };
     };
 

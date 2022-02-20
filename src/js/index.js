@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arr: [
             {
                 order: 0,
-                img: ['./img/slide/1/slide-1.png', './img/slide/1/slide-2.png', './img/slide/1/slide-3.png', './img/slide/1/slide-4.png'],
+                img: ['./img/slide/1/slide-1.avif', './img/slide/1/slide-2.avif', './img/slide/1/slide-3.avif', './img/slide/1/slide-4.avif'],
                 type: 'Кровля загородного дома',
                 info_ru: ['Площадь утепление - 130м2', 'Срок выполнения - 8 часов', 'Применяемый материал - Экотермикс 600', 'Толщина утеления - 150мм'],
                 info_ua: ['Площа утеплення – 130м2', 'Термін виконання – 8 годин', 'Застосовуваний матеріал - Екотермікс 600', 'Товщина втілення - 150мм'],
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 order: 1,
-                img: ['./img/slide/2/slide-1.png', './img/slide/2/slide-2.png', './img/slide/2/slide-3.png', './img/slide/2/slide-4.png'],
+                img: ['./img/slide/2/slide-1.avif', './img/slide/2/slide-2.avif', './img/slide/2/slide-3.avif', './img/slide/2/slide-4.avif'],
                 type: 'Овцеферма',
                 info_ru: ['Площадь утепление - 470м2', 'Срок выполнения - 1 день', 'Применяемый материал - Экотермикс 600', 'Толщина утеления - 50мм'],
                 info_ua: ['Площа утеплення – 470м2', 'Термін виконання – 1 день', 'Застосовуваний матеріал - Екотермікс 600', 'Товщина втілення - 50мм'],
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 order: 2,
-                img: ['./img/slide/3/slide-1.png', './img/slide/3/slide-2.png', './img/slide/3/slide-3.png', './img/slide/3/slide-4.png'],
+                img: ['./img/slide/3/slide-1.avif', './img/slide/3/slide-2.avif', './img/slide/3/slide-3.avif', './img/slide/3/slide-4.avif'],
                 type: 'Купольный дом',
                 info_ru: ['Площадь утепление - 280м2', 'Срок выполнения - 2 дня', 'Применяемый материал - Экотермикс 600', 'Толщина утеления - 100мм'],
                 info_ua: ['Площа утеплення – 280м2', 'Термін виконання – 2 дні', 'Застосовуваний матеріал - Екотермікс 600', 'Товщина втілення - 100мм'],
@@ -308,11 +308,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     'ua' : 'Утеплили пінополіуретаном більше <span class="colortext">2000</span> об`єктів за <span class="colortext">8 рокiв</span>'
                 }
             },
-            'src' : {
-                'content-info_img' : {
-                    'ru' : './img/constructor_lng/ru.png',
-                    'ua' : './img/constructor_lng/ua.png'
-                }
+            'attr' : {
+                'src' : {
+                    'content-info_img' : {
+                        'ru' : './img/constructor_lng/ru.avif',
+                        'ua' : './img/constructor_lng/ua.avif'
+                    },
+                },
+                'alt' : {
+                    'content-info_img' : {
+                        'ru' : 'схема материалов: Пенополиуретан - 20 мм, Экструдированный пенополистирол - 30 мм, Пенопласт - 40 мм, Минеральная вата - 45 мм, Полистиролбетон - 120 мм, Древесный брус - 180 мм, Красный кирпич - 560 мм, Бетонный блок - 1300 мм',
+                        'ua' : 'схема матеріалів: Пінополіуретан - 20 мм, Екструдований пінополістирол - 30 мм, Пінопласт - 40 мм, Мінеральна вата - 45 мм, Полістиролбетон - 120 мм, Дерев`яний брус - 180 мм, Червона цегла - 560 мм, Бетонний блок – 1300 мм'
+                    },
+                    'description-info_img-0' : {
+                        'ru' : 'Жилые дома',
+                        'ua' : 'Житлові будинки',
+                    },
+                    'description-info_img-1': {
+                        'ru' : 'Коммерческие здания',
+                        'ua' : 'Комерційні будинки',
+                    },
+                    'description-info_img-2': {
+                        'ru' : 'Резервуары и цестерны',
+                        'ua' : 'Резервуари та цестерни',
+                    },
+                    'description-info_img-3': {
+                        'ru' : 'Склады и ангары',
+                        'ua' : 'Склади та ангари',
+                    },
+                },
             }
         },
         lng : ['ru', 'ua']
