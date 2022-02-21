@@ -1,12 +1,12 @@
 const createDescription = ( oprion ) => {
     const arr = oprion.arr;
-    let hash = window.location.hash;
+    const hash = window.location.hash.substr(1);
 
     arr.forEach( (key, index) => {
         let infoEl = '';
 
         (() => {
-            const info = hash === '#ua' ? key.info_ua : key.info_ru;
+            const info = hash === 'uk' ? key.info_uk : key.info_ru;
             
             info.forEach(i => {
                 return  infoEl += `

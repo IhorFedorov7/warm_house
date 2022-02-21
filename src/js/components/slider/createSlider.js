@@ -1,25 +1,27 @@
 const createSlider = ( oprion ) => {
     const arr = oprion.arr;
     const fun = oprion.funSlider;
-    let hash = window.location.hash;
-
+    const hash = window.location.hash.substr(1);
+    
     arr.forEach( (key, index) => {
         let imgEl = '';
         let infoEl = '';
 
         (() => {
-            const img = key.img;
+            const img = key.imges.img;
+            const alt = key.imges.alt;
             
-            img.forEach(images => {
+            img.forEach(arr => {
+
                 return  imgEl += `
-                    <img src="${images}" alt="" width="100%" height="100%">
+                    <img src="${arr}" alt="${alt[hash]}" width="100%" height="100%">
                 `;
             }); 
             
         })();
 
         (() => {
-            const info = hash === '#ua' ? key.info_ua : key.info_ru;
+            const info = hash === 'uk' ? key.info_uk : key.info_ru;
             
             info.forEach(i => {
                 return  infoEl += `
@@ -40,7 +42,7 @@ const createSlider = ( oprion ) => {
                 </div>
                 <div class="block_info">
                     <div class="block-info_title">
-                        <h3 class="lng-slide_info-title-${index}">${key.type}</h3>
+                        <h3 class="lng-slide_info-title-${index}">${key.type[hash]}</h3>
                     </div>
                     <div class="blosk-info_description">
                         <ul>
@@ -48,7 +50,9 @@ const createSlider = ( oprion ) => {
                         </ul>
                     </div>
                     <div class="blosk-info_btn">
-                        <button class="btn_calculate lng-btn_calculate">${key.btn}</button>
+                        <a href="/#form">
+                            <button class="btn_calculate lng-btn_calculate">${key.btn}</button>
+                        </a>
                     </div>
                 </div>
             </div>

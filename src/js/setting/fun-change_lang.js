@@ -21,13 +21,14 @@ const changeLang = ( option ) => {
 
         if ( !allLang.includes(hash) ) {
 
-            location.href = `${window.location.pathname}#ua`;
+            location.href = `${window.location.pathname}#uk`;
 
             location.reload();
         }
 
         select.value = hash;
-
+        
+        document.all[0].setAttribute('lang', hash);
         document.querySelector('title').textContent = text['title'][hash];
 
         for ( let key in text ) {

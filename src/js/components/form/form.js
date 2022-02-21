@@ -64,7 +64,10 @@ const form = function( option ) {
 
     const serializeForm = ( formNode ) => {
         const { elements } = formNode;
-        let textForm = `Resutl is: ${document.location.host}`; 
+        let textForm = `
+            Resutl is: ${document.location.host}
+            %0Alanguage: ${window.location.hash.substr(1)}
+        `; 
         let arrForm = {};
 
         const data = Array.from(elements)
@@ -113,11 +116,18 @@ const form = function( option ) {
     };
 
     async function formSend (e) {
-
+        const elValid = document.querySelectorAll('.valid');
+        
         e.preventDefault();
         serializeForm(forms);
 
         forms.reset();
+        
+        elValid.forEach( el => {
+            el.classList.remove('valid');
+        });
+
+        btn.disabled = true;
     };
 }
 
