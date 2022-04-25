@@ -44,15 +44,18 @@ const createSlider = ( oprion ) => {
                     <div class="block-info_title">
                         <h3 class="lng-slide_info-title-${index}">${key.type[hash]}</h3>
                     </div>
-                    <div class="blosk-info_description">
+                    <div class="block-info_description">
                         <ul>
                            ${infoEl}  
                         </ul>
                     </div>
-                    <div class="blosk-info_btn">
+                    <div class="block-info_btn">
                         <a href="/#form">
                             <button class="btn_calculate lng-btn_calculate">${key.btn}</button>
                         </a>
+                    </div>
+                    <div class="block-info_footnote">
+                        <span class="lng-info_footnote">${key.footnote[hash]}</span>
                     </div>
                 </div>
             </div>

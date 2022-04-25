@@ -66,7 +66,7 @@ const form = function( option ) {
         const { elements } = formNode;
         let textForm = `
             Resutl is: ${document.location.host}
-            %0Alanguage: ${window.location.hash.substr(1)}
+            %0Alanguage: ${document.querySelector('select').value}
         `; 
         let arrForm = {};
 
